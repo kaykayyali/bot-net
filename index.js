@@ -99,7 +99,7 @@ app.post('/login', function(req, res){
 	} else {
 		req.session.error = 'Authentication failed, please check your '
 		+ ' username and password.'
-		+ ' (use "tj" and "foobar")';
+		+ ' (use "kaykayyali" and "foobar")';
 		res.redirect('/login');
 		}
 	});
