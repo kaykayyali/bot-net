@@ -1,0 +1,19 @@
+{
+  "name": "bot-net",
+  "version": "0.0.1",
+  "description": "Simple socket service to allow control of all of my RPi Bots",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaykayyali/bot-net.git"
+  },
+  "author": "Kaysser E Kayyali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaykayyali/bot-net/issues"
+  },
+  "homepage": "https://github.com/kaykayyali/bot-net#readme"
+}
