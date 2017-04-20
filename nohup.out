@@ -1,0 +1,10 @@
+
+> bot-net@0.0.1 start /home/ec2-user/projects/bot-net
+> node index.js
+
+Online
+
+> bot-net@0.0.1 start /home/ec2-user/projects/bot-net
+> node index.js
+
+(node:3208) DeprecationWarning: sys is deprecated. Use util instead.

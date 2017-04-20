@@ -6,6 +6,8 @@ var bodyParser = require('body-parser');
 var hash = require('pbkdf2-password')()
 var path = require('path');
 var session = require('express-session');
+var logger = require('logger').createLogger('development.log');
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -38,7 +40,7 @@ hash({ password: 'foobar' }, function (err, pass, salt, hash) {
 	users.kaykayyali.hash = hash;
 });
 function authenticate(name, pass, fn) {
-	if (!module.parent) console.log('authenticating %s:%s', name, pass);
+	if (!module.parent) logger.log('authenticating %s:%s', name, pass);
 	var user = users[name];
 	// query the db for the given username
 	if (!user) return fn(new Error('cannot find user'));
@@ -108,9 +110,9 @@ app.post('/login', function(req, res){
 app.use(express.static('public'));
 
 io.on('connection', function(client){ 
-	console.log(client, "Connected");
+	logger.log(client, "Connected");
 });
 
 server.listen(3000, function() {
-	console.log("Online");
+	logger.log("Online");
 });
