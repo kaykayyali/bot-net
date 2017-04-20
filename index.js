@@ -9,7 +9,7 @@ var session = require('express-session');
 var logger = require('logger').createLogger('development.log');
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+ app.set('views', path.join(__dirname, 'views'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({
